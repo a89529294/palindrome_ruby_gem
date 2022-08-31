@@ -4,7 +4,11 @@ require_relative "a89529294_palindrome/version"
 module A89529294_palindrome
   # Returns true for a palindrome, false otherwise.
   def palindrome?
-    processed_content == processed_content.reverse
+    if processed_content.length > 0
+      processed_content == processed_content.reverse
+    else
+      false
+    end
   end
 
   private
